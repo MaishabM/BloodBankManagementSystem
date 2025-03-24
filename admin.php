@@ -12,8 +12,8 @@
         <h3 class = "welcome_msg"> Welcome back Admin! </h3>
 
         <div class = "right-btns">
-             <a href = "search.php"> &#128269; Search </a>
-             <a class = "logout-btn" href = "logout.php"> Logout </a>
+            <a href = "search.php"> &#128269; Search </a>
+            <a class = "logout-btn" href = "logout.php"> Logout </a>
         </div>
     </header>
 
@@ -28,7 +28,7 @@
             </li>
 
             <li>
-                <a href = ""> Donate Blood </a>
+                <a href = "donateBlood.php"> Donate Blood </a>
             </li>
 
             <li>
