@@ -9,7 +9,7 @@
 <body>
     <header class = "header">
         <a href="#" id="menu_btn">☰ Menu</a>
-        <h3 class = "welcome_msg"> Welcome back Admin! </h3>
+        <h3 class = "welcome_msg"> Your Dashboard </h3>
 
         <div class = "right-btns">
             <a href = "search.php"> &#128269; Search </a>
@@ -40,7 +40,7 @@
             </li>
 
             <li>
-                <a href = ""> Issue Blood </a>
+                <a href = "issueBlood.php"> Issue Blood </a>
             </li>
 
             <li>

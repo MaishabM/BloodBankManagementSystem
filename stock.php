@@ -13,7 +13,7 @@
         die("Connection to this database failed due to " . mysqli_connect_error());
 }
 
-    $sql = "SELECT * FROM stock";
+    $sql = "SELECT * FROM stock ORDER BY blood_group";
     $result = mysqli_query($con, $sql);
 
 
@@ -50,7 +50,7 @@
             </li>
 
             <li>
-                <a href = ""> Donate Blood </a>
+                <a href = "donateBlood.php"> Donate Blood </a>
             </li>
 
             <li>
@@ -62,7 +62,7 @@
             </li>
 
             <li>
-                <a href = ""> Issue Blood </a>
+                <a href = "issueBlood.php"> Issue Blood </a>
             </li>
 
             <li>
