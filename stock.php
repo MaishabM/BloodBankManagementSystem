@@ -78,7 +78,7 @@
     <center>
         <!-- <h1"> Donor Information </h1> -->
 
-        <table border = "2px">
+        <table>
             <tr>
                 <th> ID </th>
                 <th> Blood Group </th>

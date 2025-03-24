@@ -32,24 +32,97 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
     <!-- Bootstrap CSS -->
-    <link rel = "stylesheet" href = "	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Ensures the form elements are aligned properly */
+        .search-container {
+            margin-top: 50px;  
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        /* Fixes select box sizing issue */
+        .search-container select {
+            font-size: 1.2rem; 
+            padding: 4px 5px; /* Adds proper padding inside */
+            border-radius: 3px;
+            width: 180px; /* Adjust width so text isn't cut off */
+            text-align: center; /* Centers the text */
+            appearance: none; /* Removes default browser styling */
+        }
+
+        /* Fixes search box */
+        .search-container input {
+            font-size: 1.2rem;
+            padding: 10px;
+            width: 250px; /* Adjust width */
+        }
+
+        /* Ensures buttons look good */
+        .search-container button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #4a90e2, #204080);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .search-container button:hover {
+            background:rgb(142, 216, 250);
+            color: black;
+        }
+
+        .search-container a{
+            padding: 8px;
+            background: linear-gradient(45deg, #4a90e2, #204080);
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: none;
+            margin-left: 20px;
+        }
+
+        .search-container a:hover {
+            background:rgb(142, 216, 250);
+            color: black;
+        }
+
+        /* Ensures table visibility */
+        .table-container {
+            margin-top: 5px; 
+            padding: 70px;
+        }
+</style>
+
+
+    </style>
 
 </head>
 <body>
 
-    <div class = "container" padding-top = "50px">
-        <form method = "POST" class="d-flex align-items-center">
-            <label for="table_name" class="me-3 fs-4">Table:</label>
-            <select name="table_name" id="table_name" class="form-control form-control-lg w-auto me-4 fs-4" required>
-                    <option value="">SELECT</option>
-                    <option name = "donor" value="donor">Donor</option>
-                    <option name = "patient" value="patient">Patient</option>
-            </select>
-            <input type = "text" name = "search" placeholder = "Search Data" class="form-control form-control-lg w-50 me-3 fs-4">
-            <button class = "btn btn-dark btn lg fs-4 px-4" type = "submit" name = "submit">Search</button>
-        </form>
+    <div class = "container">
+        <div class = "search-container">
+            <form method = "POST" class="d-flex align-items-center">
+                <label for="table_name" class="me-3 fs-4">Table:</label>
+                <select name="table_name" id="table_name" class="form-control form-control-lg w-auto me-4 fs-4" required>
+                        <option value="">SELECT</option>
+                        <option name = "donor" value="donor">Donor</option>
+                        <option name = "patient" value="patient">Patient</option>
+                </select>
+                <input type = "text" name = "search" placeholder = "Search Data" class="form-control form-control-lg w-50 me-3 fs-4">
+                <button class = "btn btn-dark btn lg fs-4 px-4" type = "submit" name = "submit">Search</button>
+                <a href = "admin.php" class = "btn btn-dark btn lg fs-4 px-4">Home</a>
+            </form>
+        </div>
+    </div>
 
-        <div class = "container" padding-top = "50px">
+        <div class = "table-container" padding-top = "50px">
             <table class="table table-bordered table-striped mt-4" style="font-size: 1.2rem;">
             <?php
                 if (isset($_POST['submit'])) {
@@ -166,11 +239,8 @@
                 }
             ?>
             </table>
-        </div>>
-        
-
         </div>
-    </div>
+        
 
 </body>
 </html>

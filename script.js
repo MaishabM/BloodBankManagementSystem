@@ -1,11 +1,14 @@
 const menu_btn = document.getElementById("menu_btn");
 const sidebar = document.getElementById("sidebar");
 
-menu_btn.addEventListener("click", function() {
-    // Toggle sidebar visibility
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px";
+// Set sidebar to closed state initially
+let isSidebarOpen = false;
+
+menu_btn.addEventListener("click", function () {
+    if (isSidebarOpen) {
+        sidebar.classList.remove("open");
     } else {
-        sidebar.style.left = "0px";
+        sidebar.classList.add("open");
     }
+    isSidebarOpen = !isSidebarOpen; // Toggle state
 });

@@ -39,13 +39,13 @@
 </head>
 <body>
 <header class = "header">
-        <a href="#" id="menu_btn">☰ Menu</a>
+        <a class = "menu-btn" href="#" id="menu_btn">☰ Menu</a>
         <h3 class = "welcome_msg"> Donor Information </h3>
 
         <div class = "right-btns">
-            <a class= "right-btns" href = "admin.php"> Home </a>
-            <a class= "right-btns" href = "search.php"> &#128269; Search </a>
-            <a class= "right-btns" href = "logout.php"> Logout </a>
+            <a href = "admin.php"> Home </a>
+            <a href = "search.php"> &#128269; Search </a>
+            <a href = "logout.php"> Logout </a>
         </div>
     </header>
 
@@ -87,8 +87,7 @@
 <div class = "data_sheet">
     <center>
         <!-- <h1"> Donor Information </h1> -->
-
-        <table border = "2px">
+        <table>
             <tr>
                 <th> ID </th>
                 <th> Name </th>
