@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3c6c6; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px; /* Adds empty space above and below */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+form {
+    background: skyblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* max-height: 100vh; Makes sure form fits screen */
+    overflow-y: auto; /* Adds scrolling if content overflows */
+}
+
+label {
+    font-weight: bold;
+    /* justify-content: space-between; */
+}
+
+input, select, textarea {
+    width: 65%;
+    padding: 8px; /* Reduced padding to make inputs smaller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller text size for compact inputs */
+    /* justify-content: space-between; */
+}
+
+.gender_inp, .status_inp {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gender_inp label, .status_inp label {
+    margin-right: 10px; /* Keeps the label close to radio buttons */
+    white-space: nowrap;
+}
+
+.gender_inp input , .status_inp input{
+    margin-right: 0px;
+    padding-left: 10px;
+} 
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
