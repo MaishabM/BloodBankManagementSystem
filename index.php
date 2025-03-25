@@ -23,14 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($row['username'] == "admin") {
             header("Location: admin.php");
             exit();
-        } elseif ($row['username'] == "donor") {
+        } 
+        elseif ($row['username'] == "donor") {
             header("Location: donor.php");
             exit();
-        } elseif ($row['username'] == "patient") {
+        } 
+        elseif ($row['username'] == "patient") {
             header("Location: patient.php");
             exit();
         }
-    } else {
+    }
+    else {
         $error_message = "Invalid Username or Password!";
     }
 }

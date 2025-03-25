@@ -106,6 +106,7 @@ button {
 
 button:hover {
     background: rgb(44, 162, 209);
+    color: white;
 }
 
 .error {
