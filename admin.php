@@ -33,7 +33,7 @@
 
     <div class="content">
         <p>Welcome to the Blood Bank Management System dashboard. Manage donors, patients, and inventory efficiently.</p>
-        <img class="main_img" alt="Error loading image..." src="hospital.jpg">
+        <img class="main_img" alt="Error loading image..." src="worker.jpg">
 
         <div class="dashboard-stats">
             <div class="stat-box">

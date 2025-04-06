@@ -68,8 +68,17 @@
             padding-bottom: 10px;
         }
 
+        body {
+            background-image: url('bgForaddDonor.jpg');
+            background-size: cover;       /* Cover the entire element */
+            background-repeat: no-repeat; /* Don’t repeat the image */
+            background-position: center;  /* Center the image */
+            width: 100%;
+            height: 100vh;
+        }
+
     .form_box {
-        background-color: skyblue;
+        background-color: rgba(135, 207, 235, 0.76);
         width: 400px;
         padding-top: 40px;
         padding-bottom: 40px;
