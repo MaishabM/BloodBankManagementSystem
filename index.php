@@ -21,9 +21,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($row) {
         if ($row['username'] == "admin") {
-            header("Location: admin.php");
+            echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+            echo '<script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Welcome Back Admin!",
+                        showConfirmButton: false,
+                        timer: 1000
+                    });
+                    setTimeout(function() {
+                        window.location.href = "admin.php";
+                    }, 1000);
+                });
+            </script>';
             exit();
-        } 
+        }
         elseif ($row['username'] == "donor") {
             header("Location: donor.php");
             exit();
@@ -49,6 +63,7 @@ mysqli_close($con);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Blood Bank</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">

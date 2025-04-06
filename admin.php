@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <a href="#" id="menu_btn">☰ Menu</a>
-        <h3 class="welcome_msg">Your Dashboard</h3>
+        <!-- <h3 class="welcome_msg">Your Dashboard</h3> -->
 
         <div class="right-btns">
             <a href="search.php">🔍 Search</a>

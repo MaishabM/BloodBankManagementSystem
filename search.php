@@ -114,6 +114,8 @@
                         <option value="">SELECT</option>
                         <option name = "donor" value="donor">Donor</option>
                         <option name = "patient" value="patient">Patient</option>
+                        <option name = "blood" value="blood">Donation Info</option>
+                        <option name = "issue" value="issue">Issuance Info</option>
                 </select>
                 <input type = "text" name = "search" placeholder = "Search Data" class="form-control form-control-lg w-50 me-3 fs-4">
                 <button class = "btn btn-dark btn lg fs-4 px-4" type = "submit" name = "submit">Search</button>
@@ -151,6 +153,19 @@
                                 patient_address LIKE '%$search%' OR
                                 patient_status LIKE '%$search%' OR
                                 patient_quantity LIKE '%$search%'";
+                    }
+                    else if ($table == "blood") {
+                        $sql = "SELECT * FROM blood WHERE 
+                                blood_no LIKE '%$search%' OR 
+                                donor_id LIKE '%$search%' OR 
+                                quantity LIKE '%$search%' ";
+                    }
+                    else if ($table == "issue") {
+                        $sql = "SELECT * FROM issue WHERE 
+                                issue_id LIKE '%$search%' OR 
+                                patient_id LIKE '%$search%' OR 
+                                quantity LIKE '%$search%' OR
+                                issue_date LIKE '%$search%'";
                     }
                     else {
                         echo "<h3>Please select a table.</h3>";
@@ -199,8 +214,7 @@
                             echo "Error: " . mysqli_error($con);
                         }
                     }
-                    else {
-
+                    elseif ($table == "patient") {
                         if ($result) {
                             if (mysqli_num_rows($result) > 0) {
                                 echo "<thead>
@@ -223,6 +237,68 @@
                                             <td>{$row['donor_bloodgroup']}</td>
                                             <td>{$row['donor_contact']}</td>
                                             <td>{$row['donor_email']}</td>
+                                        </tr>";
+                                }
+
+                                echo "</tbody>";
+                            } 
+                            else {
+                                echo "<h3>No records found</h3>";
+                            }
+                        } 
+                        else {
+                            echo "Error: " . mysqli_error($con);
+                        }
+                    }
+                    elseif($table == "blood") {
+                        if ($result) {
+                            if (mysqli_num_rows($result) > 0) {
+                                echo "<thead>
+                                        <tr>
+                                            <th>Blood No</th>
+                                            <th>Donor ID</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>";
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>
+                                            <td>{$row['blood_no']}</td>
+                                            <td>{$row['donor_id']}</td>
+                                            <td>{$row['quantity']}</td>
+                                        </tr>";
+                                }
+
+                                echo "</tbody>";
+                            } 
+                            else {
+                                echo "<h3>No records found</h3>";
+                            }
+                        } 
+                        else {
+                            echo "Error: " . mysqli_error($con);
+                        }
+                    }
+                    else {
+                        if ($result) {
+                            if (mysqli_num_rows($result) > 0) {
+                                echo "<thead>
+                                        <tr>
+                                            <th>Issue ID</th>
+                                            <th>Patient ID</th>
+                                            <th>Blood Issued</th>
+                                            <th>Issue Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>";
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>
+                                            <td>{$row['issue_id']}</td>
+                                            <td>{$row['patient_id']}</td>
+                                            <td>{$row['quantity']}</td>
+                                            <td>{$row['issue_date']}</td>
                                         </tr>";
                                 }
 
