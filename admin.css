@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: linear-gradient(#b0d7f7, #52cef4);
 }
 
 .header {
@@ -114,7 +113,8 @@ ul li a:hover {
 .content {
     /* margin-left: 260px; */
     padding: 50px;
-    background-color: linear-gradient(#b0d7f7, #52cef4);
+    background: linear-gradient(to bottom, #FFE4E1, #FFB07C);
+    /* background: transparent; */
     min-height: 100vh;
     width: 100%;
     transition: 0.3s;
@@ -144,8 +144,8 @@ ul li a:hover {
     width: 95%;
     margin: 80px auto 20px;  /* Added top margin so table is below the menu */
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(240, 97, 97, 0.298);
+    background-color: #FFB07C;
     overflow-x: auto;
 }
 
