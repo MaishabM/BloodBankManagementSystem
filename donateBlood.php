@@ -1,16 +1,7 @@
 <?php
     error_reporting(0);
 
-    $host = "localhost";
-    $username = "root";
-    $password = "root";
-    $database = "bloodbank";
-
-    $con = mysqli_connect($host, $username, $password, $database);
-
-    if($con === false) {
-        die("Connection error: ". mysqli_connect_error());
-    }
+    include('connect.php');
 
     if(isset($_POST['submit'])) {
         $blood_no = $_POST['blood_no'];

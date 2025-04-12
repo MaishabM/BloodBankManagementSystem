@@ -12,3 +12,24 @@ menu_btn.addEventListener("click", function () {
     }
     isSidebarOpen = !isSidebarOpen; // Toggle state
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const form = document.querySelector("form");
+//     const inputField = document.getElementById("inputField");
+//     const errorMessage = document.getElementById("errorMessage");
+
+//     form.addEventListener("submit", function(event) {
+//         const inputValue = inputField.value.trim();
+
+//         if (inputValue === "") {
+//             event.preventDefault(); // Stops form submission
+//             inputField.classList.add("shake");
+//             errorMessage.style.visibility = "visible";
+
+//             setTimeout(() => {
+//                 inputField.classList.remove("shake");
+//                 errorMessage.style.visibility = "hidden";
+//             }, 500);
+//         }
+//     });
+// });

@@ -1,16 +1,7 @@
 <?php
     error_reporting(0);
 
-    $host = "localhost";
-    $username = "root";
-    $password = "root";
-    $database = "bloodbank";
-
-    $con = mysqli_connect($host, $username, $password, $database);
-
-    if($con === false) {
-        die("Connection error: ". mysqli_connect_error());
-    }
+    include('connect.php');
 
     $donor_id = $_GET['donor_id'];
     $sql = "SELECT * FROM donor WHERE donor_id = '$donor_id' ";

@@ -1,16 +1,7 @@
 <?php
 error_reporting(0);
-$server   = "localhost";
-$username = "root";
-$password = "root";
-$database = "bloodbank";
 
-// Connect to the database
-$con = mysqli_connect($server, $username, $password, $database);
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+include ('connect.php');
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
@@ -80,9 +71,10 @@ mysqli_close($con);
             <h2>Login</h2>
             <?php if (isset($error_message)) { echo "<p class='error'>$error_message</p>"; } ?>
             <form action="index.php" method="post">
+                <!-- <div class = "error" id = "errorMessage">Invalid Input</div> -->
                 <div class="input-group">
                     <label>Username</label>
-                    <input type="text" name="username" required placeholder="Enter your username">
+                    <input type="text" id="inputField" name="username" required placeholder="Enter your username">
                 </div>
                 <div class="input-group">
                     <label>Password</label>

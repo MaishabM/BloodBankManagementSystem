@@ -1,17 +1,6 @@
 <?php
 
-    $server = "localhost";
-    $username = "root";
-    $password = "root";
-    $database = "bloodbank";
-
-    $con = mysqli_connect($server, $username, $password, $database);
-    mysqli_select_db($con, "bloodbank") or die("Database selection failed: " . mysqli_error($con));
-
-
-    if(!$con){
-        die("Connection to this database failed due to " . mysqli_connect_error());
-}
+    include('connect.php');
 
     $sql = "SELECT * FROM donor";
     $result = mysqli_query($con, $sql);
