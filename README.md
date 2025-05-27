@@ -13,5 +13,5 @@ A complete Blood Bank Management System built using PHP, MySQL, HTML, CSS, and J
 - HTML/CSS
 - JavaScript
 
-Username- admin
+Username- admin // 
 Password- 1234
